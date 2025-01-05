@@ -1,0 +1,27 @@
+stages:
+    - build
+    - test
+    - deploy
+
+before_script:
+    - echo "Before a Script"
+
+after_script:
+    - echo "Clean UP Activity"
+
+build-job:
+    stage: build
+    script:
+        - echo "First step"
+        - echo "Second step"
+
+test-job:
+    stage: test
+    script:
+        - echo "Testing step"
+
+deploy-job:
+    stage: deploy
+    when: manual
+    script:
+        - echo "Deploy step"
