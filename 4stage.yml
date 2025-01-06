@@ -1,0 +1,25 @@
+stages:
+    - build
+    - test
+    - push
+    - deploy
+
+build-job:
+    stage: build
+    script:
+        - echo "This is Build Wali Stage..!"
+
+test-job:
+    stage: test
+    script:
+        - echo "This is Test Wali Stage..!"
+
+push-job:
+    stage: push
+    script:
+        - echo "This is Push Wali Stage..!"
+
+deploy-job:
+    stage: deploy
+    script:
+        - echo "This is deploy Wali Stage..!"
